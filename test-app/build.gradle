@@ -1,0 +1,20 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply plugin: 'org.springframework.boot'
+
+project(":test-app") {
+    dependencies {
+     	compile project(":test-api")
+     	compile project(":test-commons")
+     	compile project(":test-rest")
+ 		compile libs.spring_boot_starter_web
+        compile libs.spring_boot_starter_data_jpa
+        compile libs.hibernateJava8
+        compile libs.h2
+        compile libs.liquibase
+        compile libs.guava
+        compile libs.spring_boot_starter_test
+    }
+}
+
+
+

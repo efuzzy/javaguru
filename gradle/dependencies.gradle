@@ -1,0 +1,23 @@
+ext {
+    versions = [
+            springBootVersion            : "2.1.1.RELEASE",
+            h2Version                    : "1.4.197",
+            liquibaseVersion             : "3.6.2",
+            hibernateVersion             : "5.1.0.Final",
+            lombokVersion                : "1.18.4",
+            guavaVersion                 : "18.0",
+    ]
+    libs = [
+            spring_boot_starter_web     : "org.springframework.boot:spring-boot-starter-web:$versions.springBootVersion",
+            spring_boot_starter_data_jpa: "org.springframework.boot:spring-boot-starter-data-jpa:$versions.springBootVersion",
+            spring_boot_starter_activemq: "org.springframework.boot:spring-boot-starter-activemq:$versions.springBootVersion",
+            spring_boot_starter_test    : "org.springframework.boot:spring-boot-starter-test:$versions.springBootVersion",
+	 		guava                       : "com.google.guava:guava:$versions.guavaVersion",
+            h2                          : "com.h2database:h2:$versions.h2Version",
+            liquibase                   : "org.liquibase:liquibase-core:$versions.liquibaseVersion",
+            hibernateJava8              : "org.hibernate:hibernate-java8:$versions.hibernateVersion",
+            lombok                      : "org.projectlombok:lombok:$versions.lombokVersion",
+
+    ]
+
+}

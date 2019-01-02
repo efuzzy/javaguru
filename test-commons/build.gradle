@@ -1,0 +1,8 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+project(":test-commons"){
+    dependencies {
+        compile libs.lombok
+    }
+    
+}

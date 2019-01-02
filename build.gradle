@@ -1,0 +1,29 @@
+buildscript {
+	repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.1.RELEASE")
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+apply from: "${rootDir}/gradle/dependencies.gradle"
+allprojects {
+    group "lv.javaguru.vika"
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }    
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'io.spring.dependency-management'
+

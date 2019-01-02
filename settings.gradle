@@ -1,0 +1,6 @@
+rootProject.name = 'javaguru'
+
+include 'test-commons'
+include 'test-rest'
+include 'test-api'
+include 'test-app'

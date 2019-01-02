@@ -1,0 +1,10 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+
+project(":test-rest") {
+    dependencies {
+     	compile project(":test-api")
+        compile project(":test-commons")
+ 		compile libs.spring_boot_starter_web
+    }
+}
