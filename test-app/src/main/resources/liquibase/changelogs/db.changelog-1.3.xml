@@ -7,7 +7,7 @@
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <changeSet id="5" author="viktorija" context="main">
-        <createSequence sequenceName="users_seq" />
+        <createSequence sequenceName="users_seq" startValue="2"/>
     </changeSet>
 
     <changeSet id="6" author="viktorija" context="main">
@@ -18,9 +18,13 @@
             <column name="user_name" type="varchar(50)">
                 <constraints nullable="false"/>
             </column>
-            <column name="user_mail" type="varchar(100)">
+            <column name="user_email" type="varchar(100)">
                 <constraints nullable="false"/>
             </column>
+            <column name="created_at" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="modified_at" type="TIMESTAMP WITH TIME ZONE"/>
+            <column name="version" type="BIGINT"/>
+            <column name="subscribed" type="TINYINT(1)" defaultValue="0"/>
         </createTable>
     </changeSet>
 

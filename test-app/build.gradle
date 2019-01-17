@@ -6,6 +6,7 @@ project(":test-app") {
      	compile project(":test-api")
      	compile project(":test-commons")
      	compile project(":test-rest")
+        compile project(":test-myjms")
  		compile libs.spring_boot_starter_web
         compile libs.spring_boot_starter_data_jpa
         compile libs.hibernateJava8

@@ -1,6 +1,9 @@
 rootProject.name = 'javaguru'
 
 include 'test-commons'
+include 'public-app'
 include 'test-rest'
 include 'test-api'
 include 'test-app'
+//include 'test-jms'
+include 'test-myjms'

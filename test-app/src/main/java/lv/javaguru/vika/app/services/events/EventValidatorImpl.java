@@ -1,10 +1,10 @@
 package lv.javaguru.vika.app.services.events;
 
+import lv.javaguru.vika.api.errors.CoreValidationError;
 import lv.javaguru.vika.commons.enums.ErrorCode;
 import lv.javaguru.vika.commons.enums.ErrorEmitter;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
-import lv.javaguru.vika.api.errors.CoreValidationError;
 
 @Component
 public class EventValidatorImpl implements EventValidator {

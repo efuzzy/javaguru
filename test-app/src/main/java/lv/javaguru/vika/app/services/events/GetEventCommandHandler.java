@@ -2,8 +2,8 @@ package lv.javaguru.vika.app.services.events;
 
 import lv.javaguru.vika.api.commands.events.GetEventCommand;
 import lv.javaguru.vika.api.commands.events.GetEventResult;
-import lv.javaguru.vika.app.DomainCommandHandler;
 import lv.javaguru.vika.app.domain.Event;
+import lv.javaguru.vika.app.services.DomainCommandHandler;
 import lv.javaguru.vika.commons.dtos.EventDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -10,7 +10,8 @@
         <comment>Inserting user</comment>
         <insert tableName="user">
             <column name="user_name" value="viktorija"/>
-            <column name="user_mail" value="viktorija@epasaule.lv"/>
+            <column name="user_email" value="viktorija@epasaule.lv"/>
+            <column name="subscribed" value="1"/>
         </insert>
     </changeSet>
 

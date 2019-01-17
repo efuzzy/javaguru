@@ -1,4 +1,4 @@
-package lv.javaguru.vika.rest;
+package lv.javaguru.vika.app.rest;
 
 import lv.javaguru.vika.api.CommandExecutor;
 import lv.javaguru.vika.api.commands.events.*;
@@ -7,22 +7,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 @RestController
 @RequestMapping(
-        value = "/user",
+        value = "/events",
         produces = MediaType.APPLICATION_JSON_VALUE,
         consumes = MediaType.APPLICATION_JSON_VALUE
 )
-public class UserRestController {
+public class EventRestController {
 
     private CommandExecutor commandExecutor;
 
     @Autowired
-    public UserRestController(CommandExecutor commandExecutor) {
+    public EventRestController(CommandExecutor commandExecutor) {
         this.commandExecutor = commandExecutor;
     }
 
@@ -36,7 +35,7 @@ public class UserRestController {
         return result.getEvent();
     }
 
-    @GetMapping("/events/{eventId}")
+    @GetMapping("/get/{eventId}")
     @ResponseBody
     public EventDTO get(@PathVariable("eventId") Long eventId) {
         GetEventCommand command = new GetEventCommand(eventId);
@@ -44,17 +43,18 @@ public class UserRestController {
         return result.getEvent();
     }
 
-    @GetMapping("/events/test")
+    @GetMapping("/test")
     @ResponseBody
     public String welcomeUser() {
         return "hi!";
     }
-    @GetMapping("/events/")
+
+    @GetMapping("/get")
     @ResponseBody
     public List<EventDTO> getAllEvents() {
         GetAllEventsCommand command = new GetAllEventsCommand();
         GetAllEventsResult result = commandExecutor.execute(command);
-        return new ArrayList<>();
+        return result.getEvents();
     }
 
 }

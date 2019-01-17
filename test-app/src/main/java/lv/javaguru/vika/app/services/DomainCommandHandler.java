@@ -1,4 +1,4 @@
-package lv.javaguru.vika.app;
+package lv.javaguru.vika.app.services;
 
 import lv.javaguru.vika.api.commands.DomainCommand;
 import lv.javaguru.vika.api.commands.DomainCommandResult;

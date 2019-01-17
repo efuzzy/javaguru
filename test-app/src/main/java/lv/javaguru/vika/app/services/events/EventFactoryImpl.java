@@ -1,13 +1,12 @@
 package lv.javaguru.vika.app.services.events;
 
 
+import lv.javaguru.vika.app.database.EventRepository;
+import lv.javaguru.vika.app.domain.Event;
+import lv.javaguru.vika.app.domain.EventBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import lv.javaguru.vika.app.database.EventRepository;
-import lv.javaguru.vika.app.domain.Event;
-
-import static lv.javaguru.vika.app.domain.EventBuilder.createEvent;
 @Component
 class EventFactoryImpl implements EventFactory {
 
@@ -15,7 +14,7 @@ class EventFactoryImpl implements EventFactory {
 
     @Override
     public Event create(String eventName) {
-    	Event event = createEvent()
+    	Event event = EventBuilder.createEvent()
                 .withEventName(eventName)
                 .build();
         return eventRepository.save(event);
